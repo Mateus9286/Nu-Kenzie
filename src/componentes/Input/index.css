@@ -1,0 +1,14 @@
+input {
+  height: 53px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0px 16px;
+  background-color: #f8f9fa;
+  border: solid 2px #f8f9fa;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+input:focus {
+  outline: none;
+}
