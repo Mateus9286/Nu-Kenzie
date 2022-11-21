@@ -2,15 +2,20 @@ import "./App.css";
 import "./index.css";
 import { useState } from "react";
 import { Main } from "./componentes/Main";
+import { Data } from "./data/Data";
 
 function App() {
-  const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 },
-  ]);
+  const [listTransactions, setListTransactions] = useState(Data);
 
   function add(listTransactions) {
-    setListTransactions([...listTransactions]);
+    setListTransactions([...listTransactions, Data]);
+  }
+
+  function Remove(description) {
+    const newTransaction = listTransactions.filter(
+      (list) => list.description !== description
+    );
+    setListTransactions();
   }
 
   const [changePage, setchangePage] = useState(false);

@@ -1,11 +1,10 @@
 import React from "react";
 import { Card } from "../Card";
 
-const ListCards = ({ listTransactions }) => {
+const ListCards = ({ Transactions }) => {
   return (
     <ul>
-      {}
-      <Card listTransactions={listTransactions} />
+      <Card Transactions={Transactions} />
     </ul>
   );
 };
