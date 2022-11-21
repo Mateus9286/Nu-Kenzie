@@ -1,14 +1,37 @@
-input {
+.bigger-Input {
   height: 53px;
   width: 100%;
   border-radius: 8px;
   padding: 0px 16px;
-  background-color: #f8f9fa;
-  border: solid 2px #f8f9fa;
+  background-color: var(--Grey-1);
+  border: solid 2px var(--Grey-1);
   margin-bottom: 4px;
   margin-top: 10px;
 }
 
-input:focus {
+.bigger-Input:focus {
   outline: none;
+}
+
+.smallerInput {
+  height: 48px;
+  width: 128px;
+  border-radius: 8px;
+  padding: 0px 16px;
+  justify-content: space-between;
+  background-color: var(--Grey-1);
+  border: solid 2px var(--Grey-1);
+  margin-bottom: 19px;
+  margin-top: 9px;
+}
+
+.smallerInput:focus {
+  outline: none;
+}
+
+.contInputs {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
 }

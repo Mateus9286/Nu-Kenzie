@@ -13,13 +13,20 @@
   --Grey-3: #868e96;
   --Grey-4: #212529;
 
-  /* font */
+  /* fonts */
 
   --Nunito: "Nunito", sans-serif;
+  --Inter: "Inter", sans-serif;
 }
 
 button {
   cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 body {

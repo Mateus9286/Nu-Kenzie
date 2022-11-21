@@ -9,13 +9,23 @@ function App() {
     { description: "Conta de luz", type: "saída", value: -150 },
   ]);
 
+  function add(listTransactions) {
+    setListTransactions([...listTransactions]);
+  }
+
   const [changePage, setchangePage] = useState(false);
 
   const ChangePage = () => setchangePage(true);
+  const ChangePageof = () => setchangePage(false);
 
   return (
     <main className="App">
-      <Main changePage={changePage} onClick={ChangePage} />
+      <Main
+        listTransactions={add}
+        changePage={changePage}
+        ChangePageof={ChangePageof}
+        onClick={ChangePage}
+      />
     </main>
   );
 }

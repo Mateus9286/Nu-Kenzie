@@ -3,7 +3,7 @@ import Group from "../Assets/Group 262.png";
 import { Header } from "../Header";
 import "./index.css";
 
-export function Main({ onClick, changePage }) {
+export function Main({ onClick, changePage, ChangePageof, listTransactions }) {
   if (!changePage) {
     return (
       <>
@@ -17,13 +17,19 @@ export function Main({ onClick, changePage }) {
             Iniciar
           </button>
         </div>
-        <img src={Group} alt="image" />
+        <picture>
+          <img src={Group} alt="image" />
+        </picture>
       </>
     );
   } else {
     return (
       <>
-        <Header></Header>
+        <Header
+          listTransactions={listTransactions}
+          ChangePageof={ChangePageof}
+          onClick={ChangePageof}
+        ></Header>
       </>
     );
   }

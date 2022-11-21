@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+select {
+  height: 48px;
+  width: 150px;
+  border-radius: 8px;
+  padding: 0px 16px;
+  justify-content: space-between;
+  background-color: var(--Grey-1);
+  border: solid 2px var(--Grey-1);
+  margin-top: 9px;
+}
+
+label {
+  font-family: var(--Inter);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.contSelect {
+  width: 150px;
+}

@@ -1,7 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
 form {
   height: 351px;
   width: 363px;
   border-radius: 4px;
   border: solid 1px var(--Grey-2);
   padding: 38px 24px;
+  margin-bottom: 16px;
+  margin-right: 59px;
+}
+
+span {
+  font-family: var(--Inter);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #868e96;
+  margin-bottom: 17px;
+}
+
+label {
+  font-family: var(--Inter);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--Grey-4);
+}
+
+.cont-Button {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 27px;
+  align-items: center;
+}
+
+.cont-Resumo {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleResumo {
+  font-family: var(--Nunito);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.button-Todos {
+  height: 40px;
+  width: 69px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background-color: var(--Color-primary);
+  border: solid 1px var(--Color-primary);
+  margin-right: 16px;
+  color: white;
+}
+
+.button-Todos:hover {
+  border: solid 1px white;
+}
+
+.button-Entradas {
+  height: 40px;
+  width: 87px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background-color: var(--Grey-2);
+  border: solid 1px var(--Grey-2);
+  margin-right: 16px;
+}
+
+.button-Entradas:hover {
+  border: solid 1px black;
+}
+
+.button-Despesas {
+  height: 40px;
+  width: 92px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background-color: var(--Grey-2);
+  border: solid 1px var(--Grey-2);
+}
+
+.button-Despesas:hover {
+  border: solid 1px black;
 }
