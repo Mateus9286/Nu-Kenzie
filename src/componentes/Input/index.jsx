@@ -16,7 +16,7 @@ export function Input({ onChange }) {
   );
 }
 
-export function SmallerInput({ onChange, onChangeSelect, value }) {
+export function SmallerInput({ onChange, onChangeSelect }) {
   return (
     <div className="contInputs">
       <div>
@@ -30,7 +30,7 @@ export function SmallerInput({ onChange, onChangeSelect, value }) {
           placeholder="1"
         />
       </div>
-      <Select value={value} onChangeSelect={onChangeSelect} />
+      <Select onChange={onChangeSelect} />
     </div>
   );
 }

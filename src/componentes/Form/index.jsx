@@ -4,18 +4,23 @@ import "./index.css";
 import { Total } from "../Total";
 import ListCards from "../ListCard";
 import { useState } from "react";
+import { Data } from "../../data/Data";
 
-export function Form({ listTransactions, value }) {
+export function Form() {
   const [formData, setformData] = useState({
     description: "",
     type: "",
     value: "",
   });
 
+  function evento(event) {
+    event.preventDefault();
+  }
+
   return (
     <div className="flex">
       <div>
-        <form>
+        <form onSubmit={evento}>
           <Input
             onChange={(event) =>
               setformData({ ...formData, description: event.target.value })
@@ -23,19 +28,22 @@ export function Form({ listTransactions, value }) {
           />
           <span>Ex: Compra de roupas</span>
           <SmallerInput
-            value={value}
+            value
             onChangeSelect={(event) =>
-              setformData({ ...formData, value: event.target.value })
+              setformData({
+                ...formData,
+                type: event.target.value,
+              })
             }
             onChange={(event) =>
-              setformData({ ...formData, value: event.target.value })
+              setformData({ ...formData, value: `R$ ${event.target.value},00` })
             }
           />
           <div>
             <Button />
           </div>
         </form>
-        <Total />
+        <Total formData={formData.value} />
       </div>
       <div className="cont-Resumo">
         <div className="cont-Button">
