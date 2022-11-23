@@ -2,7 +2,7 @@ import NuKenzie from "../Assets/NuKenzie(1).png";
 import "./index.css";
 import { Form } from "../Form";
 
-export function Header({ ChangePageof, onClick, listTransactions }) {
+export function Header({ ChangePageof, onClick, addList, list, remove }) {
   return (
     <>
       <div className="container">
@@ -16,7 +16,7 @@ export function Header({ ChangePageof, onClick, listTransactions }) {
             Inicio
           </button>
         </header>
-        <Form listTransactions={listTransactions} />
+        <Form remove={remove} list={list} addList={addList} />
       </div>
     </>
   );

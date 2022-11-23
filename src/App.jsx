@@ -2,20 +2,17 @@ import "./App.css";
 import "./index.css";
 import { useState } from "react";
 import { Main } from "./componentes/Main";
-import { Data } from "./data/Data";
 
 function App() {
-  const [listTransactions, setListTransactions] = useState(Data);
+  const [list, setList] = useState([]);
 
-  function add(listTransactions) {
-    setListTransactions([...listTransactions, Data]);
+  function addList(data) {
+    setList([...list, data]);
   }
 
-  function Remove(description) {
-    const newTransaction = listTransactions.filter(
-      (list) => list.description !== description
-    );
-    setListTransactions();
+  function remove(description) {
+    const newList = list.filter((card) => card.description !== description);
+    setList(newList);
   }
 
   const [changePage, setchangePage] = useState(false);
@@ -26,7 +23,9 @@ function App() {
   return (
     <main className="App">
       <Main
-        listTransactions={add}
+        list={list}
+        remove={remove}
+        addList={addList}
         changePage={changePage}
         ChangePageof={ChangePageof}
         onClick={ChangePage}

@@ -3,7 +3,14 @@ import Group from "../Assets/Group 262.png";
 import { Header } from "../Header";
 import "./index.css";
 
-export function Main({ onClick, changePage, ChangePageof, listTransactions }) {
+export function Main({
+  onClick,
+  changePage,
+  ChangePageof,
+  addList,
+  list,
+  remove,
+}) {
   if (!changePage) {
     return (
       <>
@@ -26,7 +33,9 @@ export function Main({ onClick, changePage, ChangePageof, listTransactions }) {
     return (
       <>
         <Header
-          listTransactions={listTransactions}
+          remove={remove}
+          list={list}
+          addList={addList}
           ChangePageof={ChangePageof}
           onClick={ChangePageof}
         ></Header>

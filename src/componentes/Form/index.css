@@ -40,6 +40,13 @@ label {
   flex-direction: column;
 }
 
+.titleNenhumLançamento {
+  font-family: var(--Nunito);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
 .titleResumo {
   font-family: var(--Nunito);
   font-size: 16px;

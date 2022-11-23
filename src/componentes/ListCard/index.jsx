@@ -1,16 +1,12 @@
-import React, { useState } from "react";
-import { Data } from "../../data/Data";
+import React from "react";
 import { Card } from "../Card";
+import "./index.css";
 
-const ListCards = ({ Transactions }) => {
-  const cont = [{ ...Transactions, Data }];
-  // const [list, setList] = useState(cont);
-
-  // const lista = () => setList({ ...list, cont });
+const ListCards = ({ list, remove, newList }) => {
   return (
     <ul>
-      {cont.map((ele, index) => (
-        <Card key={index} Transactions={ele} />
+      {newList.map((card, index) => (
+        <Card remove={remove} key={index} newList={card} />
       ))}
     </ul>
   );
