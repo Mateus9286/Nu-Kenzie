@@ -1,7 +1,7 @@
 .container-Total {
   display: flex;
   height: auto;
-  width: 363px;
+  width: 89%;
   border-radius: 4px;
   border: solid 1px var(--Grey-2);
   padding: 20px 24px;

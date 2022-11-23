@@ -4,7 +4,7 @@ import "./index.css";
 import { Total } from "../Total";
 import ListCards from "../ListCard";
 import { useState } from "react";
-import cardsVasio from "../Assets/NoCard.png";
+import emptyCard from "../Assets/NoCard.png";
 
 export function Form({ addList, list, remove }) {
   const [formData, setformData] = useState({
@@ -28,8 +28,6 @@ export function Form({ addList, list, remove }) {
   const newList = list.filter((cards) => {
     return filter === "Todos" ? true : filter === cards.type;
   });
-
-  console.log(newList);
 
   return (
     <div className="flex">
@@ -88,7 +86,7 @@ export function Form({ addList, list, remove }) {
               Você ainda não possui nenhum lançamento
             </h2>
             <br />
-            <img src={cardsVasio} alt="cardVasio" />
+            <img src={emptyCard} alt="emptyCard" />
           </>
         ) : (
           <ListCards

@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "../Card";
 import "./index.css";
 
-const ListCards = ({ list, remove, newList }) => {
+const ListCards = ({ remove, newList }) => {
   return (
     <ul>
       {newList.map((card, index) => (

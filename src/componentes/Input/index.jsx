@@ -4,12 +4,12 @@ import { Select } from "../Select";
 export function Input({ onChange, value }) {
   return (
     <>
-      <label htmlFor="descricao">Descrição</label>
+      <label htmlFor="description">Descrição</label>
       <input
         value={value}
         onChange={onChange}
         className="bigger-Input"
-        name="descricao"
+        name="description"
         placeholder="Digite aqui sua descrição"
         type="text"
         required
